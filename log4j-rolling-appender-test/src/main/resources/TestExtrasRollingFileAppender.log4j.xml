@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">
+
+    <appender name="RollingFileAppender" class="org.apache.log4j.rolling.RollingFileAppender">
+        <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+            <param name="FileNamePattern" value="org.apache.log4j.rolling.RollingFileAppender.%d{yyyy-MM-dd-HH-mm}.log" />
+        </rollingPolicy>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%c{1} - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d][%p][%C]%m%n" />
+        </layout>
+    </appender>
+
+    <!-- LOGGERS start here -->
+
+    <logger name="extras-RollingFileAppender" additivity="false">
+        <level value="all" />
+        <appender-ref ref="RollingFileAppender" />
+    </logger>
+
+    <logger name="console" additivity="false">
+        <level value="all" />
+        <appender-ref ref="consoleAppender" />
+    </logger>
+
+    <root>
+        <level value="off" />
+        <appender-ref ref="consoleAppender" />
+    </root>
+
+</log4j:configuration>
