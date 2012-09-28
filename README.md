@@ -1,7 +1,7 @@
 log4j-rolling-appender-test
 ===========================
 
-To run the batch files, the LOG4J_JAR and LOG4J_EXTRAS_JAR env variables must be set to point to the respective jars.
+To run the batch files, the `LOG4J_JAR` and `LOG4J_EXTRAS_JAR` env variables must be set to point to the respective jars.
 
 E.g.
 
@@ -15,11 +15,15 @@ So in the multi tests we use a tag JVM1..JVM5.
 
 ----------
 
-The multi-TestExtrasRollingFileAppender.bat script will run the TestExtrasRollingFileAppender.bat script in 5 separate JVMs.
+The `multi-TestExtrasRollingFileAppender.bat` script will run the `TestExtrasRollingFileAppender.bat` script in 5 separate JVMs.
 
 Sample console command:
 
-<pre>\log4j-rolling-appender-test\log4j-rolling-appender-test>java -classpath target\classes;target\test-classes;c:\.m3\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;c:\.m3\repository\log4j\apache-log4j-extras\1.1\apache-log4j-extras-1.1.jar grimbo.test.log4j.rollingappender.TestExtrasRollingFileAppender JVM3 5</pre>
+<pre>multi-TestExtrasRollingFileAppender.bat</pre>
+
+... spawns commands such as:
+
+<pre>java -classpath target\classes;target\test-classes;c:\.m3\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar;c:\.m3\repository\log4j\apache-log4j-extras\1.1\apache-log4j-extras-1.1.jar grimbo.test.log4j.rollingappender.TestExtrasRollingFileAppender JVM3 5</pre>
 
 Sample console output:
 
@@ -100,11 +104,15 @@ extras-RollingFileAppender - JVM3[1] 9
 
 ----------
 
-The multi-TestStandardDailyRollingFileAppender.bat script will run the TestStandardDailyRollingFileAppender.bat script in 5 separate JVMs.
+The `multi-TestStandardDailyRollingFileAppender.bat` script will run the `TestStandardDailyRollingFileAppender.bat` script in 5 separate JVMs.
 
 Sample console command:
 
-<pre>\log4j-rolling-appender-test\log4j-rolling-appender-test>java -classpath target\classes;target\test-classes;c:\.m3\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar grimbo.test.log4j.rollingappender.TestStandardDailyRollingFileAppender JVM4 5</pre>
+<pre>multi-TestStandardDailyRollingFileAppender.bat</pre>
+
+... spawns commands such as:
+
+<pre>java -classpath target\classes;target\test-classes;c:\.m3\repository\log4j\log4j\1.2.15\log4j-1.2.15.jar grimbo.test.log4j.rollingappender.TestStandardDailyRollingFileAppender JVM4 5</pre>
 
 Sample console output:
 
