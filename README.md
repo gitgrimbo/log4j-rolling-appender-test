@@ -1,6 +1,8 @@
 log4j-rolling-appender-test
 ===========================
 
+These tests are to demonstrate the concurrency problems with Log4J's `DailyRollingFileAppender` and Log4J Extras `RollingFileAppender`.
+
 To run the batch files, the `LOG4J_JAR` and `LOG4J_EXTRAS_JAR` env variables must be set to point to the respective jars.
 
 E.g.
